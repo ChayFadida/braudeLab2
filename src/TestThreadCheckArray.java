@@ -1,7 +1,12 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/** Description of SharedData: The code snippet shows a Java class called SharedData. It has four instance variables including an ArrayList of integers, an array of booleans, a boolean flag, and a final integer.
+ * @author Yuval Hilay
+ * @author Yehezkel-Chay Fadida
+ * @version 6.0z Build 9000 March 19,2023
+ */
+/**creates two threads to check if a given number can be represented as the sum of two numbers in an ArrayList. The program prompts the user to enter the size of the array, the array elements, and the target number. It then creates a SharedData object that holds the array and the target number. Two ThreadCheckArray objects are created and initialized with the same SharedData object, and then started using threads. The threads execute the check method of ThreadCheckArray, which checks if the target number can be represented as the sum of two numbers in the array. Once the threads complete their execution, the program prints the result of the check and the contents of the array and the winArray. */
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {

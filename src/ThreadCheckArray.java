@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/** Description of ThreadCheckArray: The code snippet shows a Java class called SharedData. It has four instance variables including an ArrayList of integers, an array of booleans, a boolean flag, and a final integer.
+ * @author Yuval Hilay
+ * @author Yehezkel-Chay Fadida
+ * @version 6.0z Build 9000 March 19,2023
+ */
 public class ThreadCheckArray implements Runnable 
 {
 	private boolean flag;
@@ -8,6 +13,9 @@ public class ThreadCheckArray implements Runnable
 	ArrayList<Integer> array;
 	int b;
 	
+	/**
+	 * @param sd
+	 */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -19,6 +27,10 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.size()];
 	}
 	
+	/**
+	 * @param n
+	 * @param b
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -52,6 +64,9 @@ public class ThreadCheckArray implements Runnable
 		rec(n-1, b);
 	}
 
+	/**
+	 *
+	 */
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
